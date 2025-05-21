@@ -1,0 +1,53 @@
+<!-- templates/model_form.html -->
+{% extends "base.html" %}
+
+{% block title %}Model Input{% endblock %}
+
+{% block body %}
+<h1>Loan Information</h1>
+<form action="{{ url_for('predict') }}" method="post">
+    <label>Age: <input type="number" step="any" name="field1" placeholder="Age in years" required></label><br>
+
+    <!-- Education Dropdown -->
+    <label>Education:
+        <select name="field2" required>
+            <option value="">-- Select Education Level --</option>
+            <option value="0">High School</option>
+            <option value="1">Associate's</option>
+            <option value="2">Bachelor's</option>
+            <option value="3">Master's</option>
+            <option value="4">Doctorate</option>
+        </select>
+    </label><br>
+
+    <label>Income: <input type="number" step="any" name="field3" placeholder="Monthly salary ($)"></label><br>
+    <label>Employment Experience: <input type="number" name="field4" placeholder="Years of work"></label><br>
+    <label>Loan Amount: <input type="number" step="any" name="field5" placeholder="Loan Amount ($)"></label><br>
+    <label>Interest Rate: <input type="number" step="any" name="field6" placeholder="Interest Rate"></label><br>
+    <label>Credit History Length: <input type="number" step="any" name="field8" placeholder="Years of using credit accounts"></label><br>
+    <label>Credit Score: <input type="number" name="field9" placeholder="From Bank or Credit Card Provider" required></label><br>
+    <label>Previous Loan Defaults: <input type="text" name="field10" placeholder="Failed to repay any past loans (Yes/No)"></label><br>
+
+    <label for="loan_intent">Loan Intent:</label>
+        <select name="loan_intent" id="loan_intent" required>
+            <option value="">--Select--</option>
+            <option value="debt_consolidation">Debt Consolidation</option>
+            <option value="education">Education</option>
+            <option value="home_improvement">Home Improvement</option>
+            <option value="medical">Medical</option>
+            <option value="personal">Personal</option>
+            <option value="venture">Venture</option>
+        </select><br><br>
+
+    <label for="home_ownership">Home Ownership:</label>
+        <select name="home_ownership" id="home_ownership" required>
+            <option value="">--Select--</option>
+            <option value="mortgage">Mortgage</option>
+            <option value="own">Own</option>
+            <option value="rent">Rent</option>
+            <option value="other">Other</option>
+        </select><br><br>
+    
+    <button>submit</button>
+</form>
+{% endblock %}

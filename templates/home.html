@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+{% endblock %}
+
+
+{% block body %}
+<h1>Hello!</h1>
+<p>This model is built to help banks, credit unions, and other financial institutions decide whether to approve or reject a loan application. It looks at many important details about the person applying for the loan, such as their age, income, job experience, education, credit score, and past loan history. It also considers specifics about the loan itself, like the amount requested, the purpose of the loan, and the interest rate. By using this information, the model predicts the likelihood that the applicant will be able to repay the loan on time. This helps lenders reduce the risk of giving loans to people who might default. It also speeds up the decision process, so applicants get faster responses. Overall, the model is a tool to support fair and efficient loan approvals, making it easier for financial institutions to manage their lending and protect their business.</p>
+<table>
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>Feature Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Person Age</td>
+      <td>Age of the person</td>
+    </tr>
+    <tr>
+      <td>Person Gender</td>
+      <td>Gender of the person</td>
+    </tr>
+    <tr>
+      <td>Person Education</td>
+      <td>Highest education level</td>
+    </tr>
+    <tr>
+      <td>Person Income</td>
+      <td>Annual income</td>
+    </tr>
+    <tr>
+      <td>Person Employee Experience</td>
+      <td>Years of employment experience</td>
+    </tr>
+    <tr>
+      <td>Person Home Ownership</td>
+      <td>Home ownership status (e.g., rent, own, mortgage)</td>
+    </tr>
+    <tr>
+      <td>Loan Amount</td>
+      <td>Loan amount requested</td>
+    </tr>
+    <tr>
+      <td>Loan Intent</td>
+      <td>Purpose of the loan</td>
+    </tr>
+    <tr>
+      <td>Loan Interest Rate</td>
+      <td>Loan interest rate</td>
+    </tr>
+    <tr>
+      <td>Loan Percent Income</td>
+      <td>Loan amount as a percentage of monthly income</td>
+    </tr>
+    <tr>
+      <td>Person Credit History Length</td>
+      <td>Length of credit history in years</td>
+    </tr>
+    <tr>
+      <td>Credit Score</td>
+      <td>Credit score of the person</td>
+    </tr>
+    <tr>
+      <td>Previous Loan Defaults on File</td>
+      <td>Indicator of previous loan defaults</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This loan approval model is built using a Random Forest Classifier, which is a machine learning technique that combines many 
+    decision trees to improve prediction accuracy. Currently, the model achieves 93% accuracy in predicting whether a loan 
+    should be approved or rejected. As more data from customers becomes available and the model undergoes further training, 
+    its accuracy and reliability are expected to improve, making it an even 
+    more effective tool for financial institutions to manage lending risks.</p><br>
+<p>Due to large model size and platform hosting constraints it might take a while to load the model initially.</p>
+
+<a href="/model"><button>Next</button></a>
+
+{% endblock %}

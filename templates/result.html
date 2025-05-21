@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>Prediction Result</h1>
+  <p>Prediction is: {{ prediction }}</p>
+  <br>
+  <a href="{{ url_for('model_form') }}"><button>Back to Form</button></a>
+{% endblock %}

@@ -1,0 +1,218 @@
+h1{
+    text-align: center;
+    color: #bcc1c6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  color: #fcfdff;
+}
+
+th {
+  background-color: #555555;
+}
+
+p{
+    text-align: center;
+    color: #e9ecef;
+    font-size: 22px;
+}
+
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f2027, #356878, #2c5364);
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem;
+    color: var(--dark-color);
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+form:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    position: relative;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+    transform: scale(1.02);
+}
+
+input[type="number"]:hover,
+input[type="text"]:hover {
+    border-color: #adb5bd;
+}
+
+select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    background-color: white;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    transition: var(--transition);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+    transform: scale(1.02);
+}
+
+select:hover {
+    border-color: #adb5bd;
+}
+
+/* Custom dropdown options styling */
+select option {
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    background-color: white;
+    color: var(--dark-color);
+    transition: background-color 0.2s;
+}
+
+select option:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+select option:checked {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+select option[value=""] {
+    color: #adb5bd;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating label effect */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group select {
+    padding-top: 1.5rem;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group select:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group select:not([value=""]) + label {
+    top: 0.2rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+    }
+    
+    input[type="number"],
+    input[type="text"],
+    select {
+        padding: 0.7rem 0.9rem;
+    }
+}
