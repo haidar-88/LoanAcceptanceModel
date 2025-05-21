@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-model_path = hf_hub_download(repo_id="haidar99r49r/LoanModel", filename="model.pkl")
+model_path = hf_hub_download(repo_id="haidar99r49r/LoanML", filename="model.pkl")
 model = joblib.load(model_path)
 
 @app.route("/")
